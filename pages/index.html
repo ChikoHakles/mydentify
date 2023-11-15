@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mydentify - Pahami Langkah Ekstra Pengamanan Data Mu</title>
+    <link rel="stylesheet" href="../lib/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="/pages/">Mydentify</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./">Beranda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./passwordgenerator/">Solusi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./profil/">Profil</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="hero-text">
+                        <img src="../src/home-search.png" alt="Hero Image" class="hero-image">
+                        <h1 class="text-bold">Ketahui Cara Mengamankan Data Pribadi Mu!</h1>
+                        <p class="lead text-sharp">Mydentify adalah sebuah website dimana kami berbagi tips dan solusi untuk menjaga data anda dari kebocoran serta mengedukasi kepada para pengguna internet untuk selalu waspada dari kebocoran data.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container content-container" style="background-color: #D1D1E9;">
+        <div class="row">
+            <div class="col-md-12">
+                <img src="/src/home-kaget.png" alt="Hero Image" class="hero-image content-text">
+                <h2 class="display-4  text-bold content-text">Berikut Beberapa Kasus Kebocoran Data di Dunia!</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card-deck" id="fetch-target"></div>
+            <p class="disclaimer">-- Data didapat dari situs API Terbuka <a href="https://haveibeenpwned.com/">Have I Been Pawned?</a>.</p>
+        </div>
+    </div>
+
+    <div class="container content-container" style="background-color: #E9E9E9;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="content-text">Pencegahan kebocoran data</h2>
+                <p class="lead content-text">Cegah kebocoran data dengan melakukan hal dibawah ini</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 d-flex">
+                <div class="card lavender">
+                    <div class="row no-gutters d-flex align-items-center">
+                        <div class="col-md-4 col-3">
+                            <img src="/src/teenyicons_password-solid.png" class="card-img-top card-img-two" alt="Card Image">
+                        </div>
+                        <div class="col-md-8 col-9">
+                            <div class="card-body text-left">
+                                <h5 class="card-title">Ganti passwordmu</h5>
+                                <p class="card-text">Kamu bisa mengganti password akun mu menggunakan password yang rumit agar semakin sulit ditembus</p>
+                                <a href="./passwordgenerator/"><button class="btn btn-sm btn-primary">Ganti password mu</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="card lavender">
+                    <div class="row no-gutters d-flex align-items-center">
+                        <div class="col-md-4 col-3">
+                            <img src="/src/subway_sms-8.png" class="card-img-top card-img-two" alt="Card Image">
+                        </div>
+                        <div class="col-md-8 col-9">
+                            <div class="card-body text-left">
+                                <h5 class="card-title">Tingkatkan keamanan perangkat</h5>
+                                <p class="card-text">Tambahkan multifactor Authentication di setiap akun mu agar tetap aman</p>
+                                <a href="https://glair.ai/blog-posts-id/cara-kerja-multi-factor-authentication"><button class="btn btn-sm btn-primary">Apa itu MFA?</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="card lavender">
+                    <div class="row no-gutters d-flex align-items-center">
+                        <div class="col-md-4 col-3">
+                            <img src="/src/icon-park-outline_web-page.png" class="card-img-top card-img-two" alt="Card Image">
+                        </div>
+                        <div class="col-md-8 col-9">
+                            <div class="card-body text-left">
+                                <h5 class="card-title">Hindari website phising</h5>
+                                <p class="card-text">Buka URL yang aman dan tidak sembarangan dalam memasukkan data-data pribadi/rahasia mu</p>
+                                <a href="https://www.dewaweb.com/blog/apa-itu-phising/"><button class="btn btn-sm btn-primary">Apa Ciri Nya?</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="card lavender">
+                    <div class="row no-gutters d-flex align-items-center">
+                        <div class="col-md-4 col-3">
+                            <img src="/src/tabler_password-mobile-phone.png" class="card-img-top card-img-two" alt="Card Image">
+                        </div>
+                        <div class="col-md-8 col-9">
+                            <div class="card-body text-left">
+                                <h5 class="card-title">Gunakan password manager</h5>
+                                <p class="card-text">Gunakan password manager untuk mempermudah akses akun</p>
+                                <a href="https://www.niagahoster.co.id/blog/password-manager-terbaik/"><button class="btn btn-sm btn-primary">Rekomendasi</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="card lavender">
+                    <div class="row no-gutters d-flex align-items-center">
+                        <div class="col-md-4 col-3">
+                            <img src="/src/ic_round-wifi-password.png" class="card-img-top card-img-two" alt="Card Image">
+                        </div>
+                        <div class="col-md-8 col-9">
+                            <div class="card-body text-left">
+                                <h5 class="card-title">Menggunakan koneksi yang aman</h5>
+                                <p class="card-text">Gunakan jaringan yang lebih aman dan hindari wifi yang terbuka untuk umum</p>
+                                <a href="https://www.dewaweb.com/blog/tips-aman-menggunakan-wifi-publik/"><button class="btn btn-sm btn-primary">Tips Koneksi Aman</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="card lavender">
+                    <div class="row no-gutters d-flex align-items-center">
+                        <div class="col-md-4 col-3">
+                            <img src="/src/email.png" class="card-img-top card-img-two" alt="Card Image">
+                        </div>
+                        <div class="col-md-8 col-9">
+                            <div class="card-body text-left">
+                                <h5 class="card-title">Perhatikan pengirim email yang diterima</h5>
+                                <p class="card-text">Bacalah baik baik siapa pengirim email sebelum mengklik email yang dikirimkan</p>
+                                <a href="https://cloudmatika.co.id/blog-detail/email-phising-adalah"><button class="btn btn-sm btn-primary">Seperti apa?</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 footer-col">
+                    <h5>Mydentify</h5>
+                </div>
+                <div class="col-md-3 footer-col">
+                    <h5>Laman Situs</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="./">Beranda</a></li>
+                        <li><a href="./passwordgenerator/">Solusi</a></li>
+                        <li><a href="./profil/">Profil</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-col">
+                    <h5>Media Sosial</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.instagram.com/smkn26jktofficial/">Instagram SMKN 26</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-col">
+                    <h5>Lebih lanjut</h5>
+                    <p>Ingin Tahu Lebih lanjut Tentang Kami? Hubungi kami dibawah ini</p>
+                    <a href="wa.me/6287883317649">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="../lib/jquery-3.5.1.slim.min.js"></script>
+    <script src="../lib/popper.min.js"></script>
+    <script src="../lib/bootstrap.min.js"></script>
+</body>
+</html>
