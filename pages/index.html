@@ -37,6 +37,17 @@
                         <h1 class="text-bold">Ketahui Cara Mengamankan Data Pribadi Mu!</h1>
                         <p class="lead text-sharp">Mydentify adalah sebuah website dimana kami berbagi tips dan solusi untuk menjaga data anda dari kebocoran serta mengedukasi kepada para pengguna internet untuk selalu waspada dari kebocoran data.</p>
                     </div>
+                    <div class="search-container">
+                        <input type="text" class="search-input" id="search-input" placeholder="Cek Keamanan Password mu ...">
+                        <button class="search-btn" type="button" id="get-api">
+                            <img src="../src/icons8-search-64.png" alt="Search">
+                        </button>
+                        <p class="disclaimer">*Password takkan diketahui dan disimpan, jadi tenang saja!</p>
+                        <p class="disclaimer" style="margin-top: -15px;">** Data didapat dari situs API Terbuka <a href="https://haveibeenpwned.com/">Have I Been Pawned?</a>.</p>
+                        <div class="d-flex justify-content-center">
+                            <p id="result"></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -194,8 +205,41 @@
     </div>
 
     <script src="main.js"></script>
-    <script src="../lib/jquery-3.5.1.slim.min.js"></script>
+    <script src="../lib/jquery.min.js"></script>
     <script src="../lib/popper.min.js"></script>
     <script src="../lib/bootstrap.min.js"></script>
+    <script src="../lib/sha1.js"></script>
+    <script>
+        $(function() {
+        $("#get-api").on("click", function() {
+        var sha = sha1($("#search-input").val()).toUpperCase();
+        var prefix = sha.substring(0, 5);
+        var suffix = sha.substring(5, sha.length);
+
+        $.ajax({
+            url: "https://api.pwnedpasswords.com/range/" + prefix
+        }).done(function(response){
+            var hashes = response.split('\n');
+            var breached = false;
+
+            for(let i = 0; i < hashes.length; i++) {
+                var hash = hashes[i];
+                var h = hash.split(':');
+
+                if (h[0] == suffix) {
+
+                    $("#result").html("Password sejenis ini telah tersebar sebanyak " + h[1] + "kali. Lanjut scroll untuk menanganinya.");
+                    breached = true;
+                    break;
+                }
+            }
+
+            if (!breached)
+            $("#result").html("Password sejenis ini aman, belum pernah bocor.")
+            $("#result").addClass("result")
+        });
+    });
+});
+    </script>
 </body>
 </html>
