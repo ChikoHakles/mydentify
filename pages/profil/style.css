@@ -87,5 +87,19 @@ body {
 }
 
 a {
-    color: #6246EA;
+    color: #FFFFFF;
+}
+
+li h6 img {
+    max-width: 30px;
+    margin-right: 12px;
+}
+
+.list-unstyled {
+    margin-top: 36px;
+}
+
+
+.footer-col h5 {
+    margin-top: 24px;
 }
